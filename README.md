@@ -1,1 +1,2 @@
-A simple baseline model for financial time series classification using random forests.
+This repo contains my experimentation with two simple baseline models for financial time series classification and forecasting tasks. I train a random forest classifier and an LSTM network on historical
+S&P500 closing price data and evaluate performance.
