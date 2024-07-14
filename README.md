@@ -1,0 +1,1 @@
+A simple baseline model for financial time series classification using random forests.
