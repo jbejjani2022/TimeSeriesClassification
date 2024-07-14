@@ -1,12 +1,12 @@
 # dataloading, training, and evaluation pipeline
-from data.data_loader import DataLoader
+from data.dataloader import DataLoader
 from models.random_forest import RFClassifier
 from models.evaluate import evaluate
 
 
 def main():
     DL = DataLoader()
-    data = DL.load()
+    data = DL.load(compress=True)
     x_train, y_train, x_test, y_test = DL.split(data)
     model = RFClassifier
     model.fit(x_train, y_train)
