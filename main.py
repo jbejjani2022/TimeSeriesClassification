@@ -7,7 +7,7 @@ from models.evaluate import evaluate
 def main():
     DL = DataLoader()
     data = DL.load(compress=True)
-    x_train, y_train, x_test, y_test = DL.split(data)
+    x_train, y_train, x_test, y_test = DL.split(data, classification=True)
     model = RFClassifier
     model.fit(x_train, y_train)
     y_predicted = model.predict(x_test)

@@ -15,12 +15,15 @@ class DataLoader:
         self.train_test_split = train_test_split
 
 
-    def split(self, data):
+    def split(self, data, classification=True):
         # preprocess data for training
         x, y = [], []
         for i in range(len(data) - self.num_lags):
             x.append(data[i : i + self.num_lags])
-            y.append(1 if data[i + self.num_lags] > 0 else -1)
+            if classification:
+                y.append(1 if data[i + self.num_lags] > 0 else -1)
+            else:
+                y.append(data[i + self.num_lags])
         x, y = np.array(x), np.array(y)
         # split data into train and test sets
         split_index = int(self.train_test_split * len(x))

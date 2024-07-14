@@ -8,8 +8,8 @@ END_DATE = '2023-09-01'
 
 # dataloading parameters
 NUM_LAGS = 50
-SPLIT = 0.7
+SPLIT = 0.8
 
 # random forest parameters
-N_ESTIMATORS = 80
+N_ESTIMATORS = 100
 RANDOM_STATE = 0
